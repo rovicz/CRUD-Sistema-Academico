@@ -34,11 +34,11 @@ public class CursoView extends VBox {
         form.setVgap(15);
 
         txtNome.setPromptText("Nome do Curso");
-        txtCarga.setPromptText("Carga Horária");
+        txtCarga.setPromptText("Carga em Horas");
 
         form.add(new Label("Nome:"), 0, 0);
         form.add(txtNome, 1, 0);
-        form.add(new Label("Carga Horária:"), 0, 1);
+        form.add(new Label("Carga em Horas:"), 0, 1);
         form.add(txtCarga, 1, 1);
 
         HBox botoes = new HBox(10);
@@ -57,7 +57,7 @@ public class CursoView extends VBox {
         colNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colNome.setPrefWidth(300);
 
-        TableColumn<Curso, Integer> colCarga = new TableColumn<>("Carga Horária");
+        TableColumn<Curso, Integer> colCarga = new TableColumn<>("Carga em Horas");
         colCarga.setCellValueFactory(new PropertyValueFactory<>("cargaHoraria"));
 
         tabela.getColumns().addAll(colId, colNome, colCarga);
